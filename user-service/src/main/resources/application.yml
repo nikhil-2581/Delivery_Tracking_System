@@ -23,6 +23,12 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
+  # SQL initialization
+  sql:
+    init:
+      mode: never  # Set to 'always' if you want Spring Boot to run scripts
+      # Since we're using docker-entrypoint-initdb.d, we don't need this
+
 jwt:
   secret: 6C582161D3C7AFB65C55134F127BC
   access-token-expiration: 3600000
