@@ -1,6 +1,9 @@
 package com.cryptic.userservice.controller;
 
+import com.cryptic.userservice.dto.request.ChangePasswordRequest;
+import com.cryptic.userservice.dto.request.UpdateUserRequest;
 import com.cryptic.userservice.dto.response.UserResponse;
+import com.cryptic.userservice.entity.User;
 import com.cryptic.userservice.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

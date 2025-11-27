@@ -2,6 +2,8 @@ package com.cryptic.userservice.controller;
 
 import com.cryptic.userservice.dto.request.UpdateDriverStatusRequest;
 import com.cryptic.userservice.dto.response.DriverResponse;
+import com.cryptic.userservice.entity.Driver;
+import com.cryptic.userservice.service.DriverService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
