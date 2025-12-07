@@ -6,9 +6,9 @@ spring:
     name: user-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/user_service_db
-    username: delivery_user
-    password: delivery_pass
+    url: jdbc:postgresql://localhost:5001/db
+    username: admin_user
+    password: password
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
@@ -17,7 +17,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
@@ -29,6 +29,8 @@ spring:
     init:
       mode: never  # Set to 'always' if you want Spring Boot to run scripts
       # Since we're using docker-entrypoint-initdb.d, we don't need this
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
 
 jwt:
   secret: 6C582161D3C7AFB65C55134F127BC
@@ -44,3 +46,5 @@ management:
 logging:
   level:
     com.delivery.userservice: DEBUG
+    org.springframework.security: INFO
+    org.hibernate.SQL: DEBUG
