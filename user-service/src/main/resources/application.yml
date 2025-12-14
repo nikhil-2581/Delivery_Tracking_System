@@ -33,7 +33,7 @@ spring:
       data-locations: classpath:data.sql
 
 jwt:
-  secret: 6C582161D3C7AFB65C55134F127BC
+  secret: xJk9Pq5Z1Rz4F+W3KkYbXG7z1Yc8b2KpFv0L2H1a9mM=
   access-token-expiration: 3600000
   refresh-token-expiration: 86400000
 
